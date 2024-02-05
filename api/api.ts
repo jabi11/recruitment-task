@@ -75,7 +75,7 @@ export const fetchCities = async (query: string) => {
 }
 
 export const fetchForecast = async (lat: number, long: number) => {
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_KEY}&units=metric`
+  const url = `${BASE_URL}data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_KEY}&units=metric`
   const resp: Response = await fetch(url)
   const data: OpenWeatherMapResponse = await resp.json()
   return data

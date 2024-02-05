@@ -3,7 +3,7 @@ import { Router } from 'expo-router/build/types';
 import { useEffect, useState } from 'react';
 import { Button, FlatList, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { EdgeInsets, useSafeAreaInsets } from 'react-native-safe-area-context';
-import { OpenWeatherMapGeoResponse, fetchCities } from '../api';
+import { OpenWeatherMapGeoResponse, fetchCities } from '../api/api';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function HomeScreen() {

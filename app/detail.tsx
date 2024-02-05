@@ -2,7 +2,7 @@ import { useFocusEffect, useLocalSearchParams } from "expo-router";
 import { useCallback, useState } from "react";
 import { View, Text, Button } from "react-native";
 import { EdgeInsets, useSafeAreaInsets } from "react-native-safe-area-context";
-import { OpenWeatherMapResponse, fetchForecast } from "../api";
+import { OpenWeatherMapResponse, fetchForecast } from "../api/api";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function DetailScreen() {
