@@ -1,4 +1,4 @@
-import { OpenWeatherMapGeoResponse, OpenWeatherMapResponse, fetchCities, fetchForecast } from './api';
+import { OpenWeatherMapGeoResponse, OpenWeatherMapResponse, fetchCities, fetchForecast } from '../api/api';
 import fetchMock from 'jest-fetch-mock';
 
 fetchMock.enableMocks();

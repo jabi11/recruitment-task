@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import HomeScreen from './index';
+import HomeScreen from '../app/index';
 
 describe('Home Screen', () => {
   it('has 4 children', () => {
