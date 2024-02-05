@@ -39,7 +39,7 @@ export default function HomeScreen() {
   const cityItem = (item: OpenWeatherMapGeoResponse) => {
     const {name, country, lat, lon} = item
     return (
-      <TouchableOpacity onPress={() => handleItemPress(lat, lon)} style={{flexDirection: 'row', width: "80%", justifyContent: 'space-between'}}>
+      <TouchableOpacity onPress={() => handleItemPress(lat, lon)} style={styles.cityItemPressable}>
         <Text>{name}</Text>
         <Text>{country}</Text>
      </TouchableOpacity>
@@ -76,5 +76,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     padding: 5
+  },
+  cityItemPressable: {
+    flexDirection: 'row',
+    width: "80%",
+    justifyContent: 'space-between'
   }
 });

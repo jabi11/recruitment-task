@@ -1,6 +1,6 @@
 import { useFocusEffect, useLocalSearchParams } from "expo-router";
 import { useCallback, useState } from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text, Button, StyleSheet } from "react-native";
 import { EdgeInsets, useSafeAreaInsets } from "react-native-safe-area-context";
 import { OpenWeatherMapResponse, fetchForecast } from "../api/api";
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -44,11 +44,22 @@ export default function DetailScreen() {
                     paddingLeft: insets.left,
                     paddingRight: insets.right
         }}>
-            <Text>Temp: {weather?.main.temp} Celsius</Text>
-            <Text>Description:
+            <Text style={styles.tempText}>Temp: {weather?.main.temp} Celsius</Text>
+            <Text style={styles.descText}>Description:
             {weather?.weather.map(({id, description}) => <Text key={id}>{description}</Text>)}
             </Text>
             <Button title="Save this city as favourite" onPress={saveFavourite}/>
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    tempText: {
+        fontSize: 20,
+        fontWeight: "500"
+    },
+    descText: {
+        fontSize: 15,
+        fontWeight: "300"
+    },
+  });
