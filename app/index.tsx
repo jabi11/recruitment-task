@@ -56,7 +56,7 @@ export default function HomeScreen() {
       }
     ]}>
       <Text>Check weather in your favourite city!</Text>
-      <TextInput style={{width: "80%", borderColor: "black", borderWidth: 1, borderRadius: 5, padding: 5}} placeholder="Name of city" onChangeText={handleChangeText} value={inputText}/>
+      <TextInput style={styles.textInput} placeholder="Name of city" onChangeText={handleChangeText} value={inputText}/>
       <Button title="Search" onPress={handlePress}/>
       <FlatList data={cities} renderItem={({ item }) => cityItem(item)}/>
     </View>
@@ -70,4 +70,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  textInput: {
+    width: "80%",
+    borderColor: "black",
+    borderWidth: 1,
+    borderRadius: 5,
+    padding: 5
+  }
 });
