@@ -46,6 +46,10 @@ export default function HomeScreen() {
     )
   }
 
+  const EmptyList = () => (
+    <Text>Try typing city name in box above!</Text>
+  )
+
   return (
     <View style={[styles.container,
       {
@@ -58,7 +62,7 @@ export default function HomeScreen() {
       <Text>Check weather in your favourite city!</Text>
       <TextInput style={styles.textInput} placeholder="Name of city" onChangeText={handleChangeText} value={inputText}/>
       <Button title="Search" onPress={handlePress}/>
-      <FlatList data={cities} renderItem={({ item }) => cityItem(item)}/>
+      <FlatList data={cities} renderItem={({ item }) => cityItem(item)} ListEmptyComponent={EmptyList}/>
     </View>
   );
 }
